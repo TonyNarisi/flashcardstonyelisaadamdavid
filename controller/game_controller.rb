@@ -37,6 +37,8 @@ class GameController
       end
     end
     puts "Game over."
+    sleep(1)
+    ClearScreen::reset_screen
   end
 
 end
