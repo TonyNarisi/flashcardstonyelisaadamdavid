@@ -1,8 +1,6 @@
-require_relative '../model/deck'
 require_relative '../model/parser'
 require_relative '../view/display'
 require_relative 'deck_creator'
-require 'pry'
 
 class GameController
   include Parser

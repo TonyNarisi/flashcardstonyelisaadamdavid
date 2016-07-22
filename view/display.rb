@@ -1,5 +1,3 @@
-require_relative '../model/card'
-
 module Display
 
   def self.question(card)

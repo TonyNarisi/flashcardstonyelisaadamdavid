@@ -1,7 +1,9 @@
 require_relative 'controller/game_controller'
 require_relative 'controller/deck_selector'
+require_relative 'model/parser'
+require_relative 'model/card'
+require_relative 'model/deck'
+require_relative 'view/display'
 
 DeckSelector::display_choices
-file_name = DeckSelector::evaluate_user_choice
-game_controller = GameController.new(file_name)
-game_controller.play_round
+GameController.new(DeckSelector::evaluate_user_choice).play_round

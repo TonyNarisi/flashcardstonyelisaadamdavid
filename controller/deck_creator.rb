@@ -1,7 +1,4 @@
 require_relative '../model/parser'
-require_relative '../model/card'
-require_relative '../model/deck'
-require 'pry'
 
 module DeckCreator
   include Parser
