@@ -19,7 +19,10 @@ class GameController
       deck.cards_unanswered.each do |card|
         Display::question(card)
         user_response = gets.chomp
-        if card.answered_correctly?(user_response)
+        if user_response == "exit"
+          deck.cards_unanswered = []
+          break
+        elsif card.answered_correctly?(user_response)
           Display::right_answer
           deck.move_correct_card(card)
         else
