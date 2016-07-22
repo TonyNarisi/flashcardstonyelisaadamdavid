@@ -4,6 +4,7 @@ module Display
 
   def self.display_question(card)
     puts card.question
+    puts ""
   end
 
   def self.display_answer(card)
@@ -11,11 +12,13 @@ module Display
   end
 
   def self.right_answer
-    puts "Correct."
+    puts ""
+    puts "Correct." + "\n"
   end
 
   def self.wrong_answer
-    puts "Wrong."
+    puts ""
+    puts "Wrong." + "\n"
   end
 
 end

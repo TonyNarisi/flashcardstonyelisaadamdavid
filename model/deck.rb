@@ -2,7 +2,7 @@ require_relative 'card'
 
 class Deck
 
-  attr_reader :cards_unanswered, :cards_answered
+  attr_reader :cards_unanswered
 
   def initialize(cards)
     @cards_unanswered = cards
