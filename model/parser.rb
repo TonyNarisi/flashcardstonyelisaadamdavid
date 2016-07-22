@@ -1,4 +1,4 @@
-Module Parser
+module Parser
 
   def convert_text_to_array(txt)
    deck_file = File.open(txt, 'r')
