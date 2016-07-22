@@ -6,5 +6,6 @@ require_relative 'model/deck'
 require_relative 'view/display'
 require_relative 'view/clear_screen'
 
+ClearScreen::reset_screen
 DeckSelector::display_choices
 GameController.new(DeckSelector::evaluate_user_choice).play_round

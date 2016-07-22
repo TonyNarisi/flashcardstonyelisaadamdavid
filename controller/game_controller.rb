@@ -16,6 +16,7 @@ class GameController
   end
 
   def play_round
+    ClearScreen::reset_screen
     until deck.complete?
       deck.shuffle
       deck.cards_unanswered.each do |card|
@@ -31,7 +32,7 @@ class GameController
           Display::wrong_answer
           deck.move_incorrect_card
         end
-        sleep(2)
+        sleep(1.5)
         ClearScreen::reset_screen
       end
     end
