@@ -1,11 +1,13 @@
 require_relative '../model/parser'
 require_relative '../view/display'
 require_relative 'deck_creator'
+require_relative '../view/clear_screen'
 
 class GameController
   include Parser
   include Display
   include DeckCreator
+  include ClearScreen
 
   attr_reader :deck
 
@@ -29,6 +31,8 @@ class GameController
           Display::wrong_answer
           deck.move_incorrect_card
         end
+        sleep(2)
+        ClearScreen::reset_screen
       end
     end
     puts "Game over."
