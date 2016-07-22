@@ -13,12 +13,12 @@ class Deck
     @cards_unanswered.shuffle
   end
 
-  def move_correct_card
-    @cards_answered << @cards_unanswered.delete_at(0)
+  def move_correct_card(card)
+    @cards_answered << @cards_unanswered.delete(card)
   end
 
-  def move_incorrect_card
-    @cards_unanswered << @cards_unanswered.delete_at(0)
+  def move_incorrect_card(card)
+    @cards_unanswered << @cards_unanswered.delete(card)
   end
 
   def deck_complete?

@@ -1,4 +1,3 @@
-
 class Card
 
   attr_reader :answer, :question
