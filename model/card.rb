@@ -10,6 +10,5 @@ class Card
   def answered_correctly?(user_input)
     user_input.downcase == @answer.downcase
   end
-  #method answered_correctly? compares user input to answer
 
 end

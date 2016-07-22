@@ -1,8 +1,6 @@
-require_relative '../model/deck'
 require_relative '../model/parser'
 require_relative '../view/display'
 require_relative 'deck_creator'
-require 'pry'
 
 class GameController
   include Parser
@@ -16,17 +14,17 @@ class GameController
   end
 
   def play_round
-    until deck.deck_complete?
+    until deck.complete?
       deck.shuffle
       deck.cards_unanswered.each do |card|
-        Display::display_question(card)
+        Display::question(card)
         user_response = gets.chomp
         if card.answered_correctly?(user_response)
           Display::right_answer
           deck.move_correct_card(card)
         else
           Display::wrong_answer
-          deck.move_incorrect_card(card)
+          deck.move_incorrect_card
         end
       end
     end
@@ -34,5 +32,4 @@ class GameController
   end
 
 end
-
 
