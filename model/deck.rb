@@ -10,18 +10,18 @@ class Deck
   end
 
   def shuffle
-    @cards_unanswered.shuffle
+    @cards_unanswered = @cards_unanswered.shuffle
   end
 
   def move_correct_card(card)
     @cards_answered << @cards_unanswered.delete(card)
   end
 
-  def move_incorrect_card(card)
-    @cards_unanswered << @cards_unanswered.delete(card)
+  def move_incorrect_card
+    @cards_unanswered = @cards_unanswered.rotate(-1)
   end
 
-  def deck_complete?
+  def complete?
     @cards_unanswered.length == 0
   end
 

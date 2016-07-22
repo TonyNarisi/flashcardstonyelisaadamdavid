@@ -2,12 +2,12 @@ require_relative '../model/card'
 
 module Display
 
-  def self.display_question(card)
+  def self.question(card)
     puts card.question
     puts ""
   end
 
-  def self.display_answer(card)
+  def self.answer(card)
     puts card.answer
   end
 
