@@ -7,7 +7,7 @@ true
 How many species of otters are there?
 13
 
-True of false? Otters are native to Australia.
+True or false? Otters are native to Australia.
 false
 
 True or false? Otters make and use tools.
