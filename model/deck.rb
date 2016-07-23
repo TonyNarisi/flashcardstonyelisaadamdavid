@@ -11,7 +11,7 @@ class Deck
     @cards_unanswered = @cards_unanswered.shuffle
   end
 
-  def move_correct_card(card)
+  def remove_card_from_rotation(card)
     @cards_answered << @cards_unanswered.delete(card)
   end
 
@@ -22,10 +22,5 @@ class Deck
   def complete?
     @cards_unanswered.length == 0
   end
-
-  # def restart_deck
-  #   @cards_answered.each { |card| @cards_unanswered << card }
-  #   @cards_answered = []
-  # end
 
 end
