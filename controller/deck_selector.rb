@@ -1,7 +1,7 @@
 module DeckSelector
 
   def self.display_choices
-  puts <<-GAME_LIST
+  puts <<-GAME_LIST.gsub(/^[" "]{4}/, "")
     Please choose a deck by number:
 
     1. Nighthawks
