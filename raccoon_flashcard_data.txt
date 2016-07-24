@@ -15,3 +15,9 @@ false
 
 True or false?  Raccoons can run at speeds up to 15 miles per hour.
 true
+
+True or false?  Raccoons like thai food.
+true
+
+True or false?  Raccoons can ride hoverboards?
+false

@@ -12,6 +12,8 @@ module DeckSelector
       'otter_flashcard_data.txt'
     elsif user_choice == 3
       'raccoon_flashcard_data.txt'
+    elsif user_choice == 4
+      'enumerables_flashcard_data.txt'
     end
   end
 
