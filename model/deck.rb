@@ -23,9 +23,4 @@ class Deck
     @cards_unanswered.length == 0
   end
 
-  # def restart_deck
-  #   @cards_answered.each { |card| @cards_unanswered << card }
-  #   @cards_answered = []
-  # end
-
 end

@@ -1,7 +1,7 @@
 module DeckSelector
 
    def self.display_choices
-    Display::game_selector_screen
+    ViewFormatter::game_selector_screen
   # puts <<-GAME_LIST
   #   Please choose a deck by number:
 
