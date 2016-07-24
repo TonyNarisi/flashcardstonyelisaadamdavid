@@ -4,14 +4,20 @@ fish
 True or false? Otters spend the majority of their time on land.
 true
 
-How many species of otters are there?
-13
+What stupid candy has the word otter in it?
+otter pops
 
-True or false? Otters are native to Australia.
-false
+True or false? Otters are native to Queens.
+true
 
 True or false? Otters make and use tools.
 true
 
 In years, what is the average life span of an otter in the wild?
 10
+
+the word otter is derived from the name of what mythological norse dwarf?
+Otr
+
+True or false? Fishermen in Bangladesh have bred otters to chase fish into their nets?
+true
