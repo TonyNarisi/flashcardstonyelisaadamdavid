@@ -1,24 +1,17 @@
 module Display
 
   def self.question(card)
-    puts card.question
-    puts ""
+    ViewFormatter::view_format(card.question)   
   end
-
-  # def self.answer(card)
-  #   puts card.answer
-  # end
 
   def self.right_answer
     right = ["I see you've been studying, great job!", "Yea! High five yourself!", "Yup! Nice work", "You got it right!", "Correct!", "You're a genius!"]
-    puts ""
-    puts right.sample + "\n"
+    ViewFormatter::view_format(right.sample)
   end
 
   def self.wrong_answer
     wrong = ["Incorrect, but nice try!", "That's not right, keep studying.", "Missed that one, but you're doing great.", "Nope, not quite.", "Wrong!", "That's not right but you look great today."]
-    puts ""
-    puts wrong.sample + "\n"
+    ViewFormatter::view_format(wrong.sample)
   end
 
   def self.incorrect_answer_limit_reached(card)
@@ -27,6 +20,10 @@ module Display
     The answer is #{card.answer}.
     It is recommended you retry this deck.
     INCORRECT_MESSAGE
+  end
+
+  def self.game_over
+    ViewFormatter::view_format("GAME OVER")
   end
 
 end

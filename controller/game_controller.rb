@@ -42,7 +42,7 @@ class GameController
         ClearScreen::reset_screen
       end
     end
-    puts "Game over."
+    Display::game_over
     sleep(1)
     ClearScreen::reset_screen
   end

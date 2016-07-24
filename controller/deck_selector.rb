@@ -1,14 +1,7 @@
 module DeckSelector
 
   def self.display_choices
-  puts <<-GAME_LIST.gsub(/^[" "]{4}/, "")
-    Please choose a deck by number:
-
-    1. Nighthawks
-    2. Otters
-    3. Raccoons
-
-  GAME_LIST
+    ViewFormatter::game_selector_screen
   end
 
   def self.evaluate_user_choice
