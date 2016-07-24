@@ -10,13 +10,15 @@ module Display
   # end
 
   def self.right_answer
+    right = ["I see you've been studying, great job!", "Yea! High five yourself!", "Yup! Nice work", "You got it right!", "Correct!", "You're a genius!"]
     puts ""
-    puts "Correct." + "\n"
+    puts right.sample + "\n"
   end
 
   def self.wrong_answer
+    wrong = ["Incorrect, but nice try!", "That's not right, keep studying.", "Missed that one, but you're doing great.", "Nope, not quite.", "Wrong!", "That's not right but you look great today."]
     puts ""
-    puts "Wrong." + "\n"
+    puts wrong.sample + "\n"
   end
 
   def self.incorrect_answer_limit_reached(card)
