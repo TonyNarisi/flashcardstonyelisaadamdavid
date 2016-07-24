@@ -1,15 +1,7 @@
 module DeckSelector
 
-   def self.display_choices
+  def self.display_choices
     ViewFormatter::game_selector_screen
-  # puts <<-GAME_LIST
-  #   Please choose a deck by number:
-
-  #   1. Nighthawks
-  #   2. Otters
-  #   3. Raccoons
-
-  # GAME_LIST
   end
 
   def self.evaluate_user_choice
@@ -22,10 +14,5 @@ module DeckSelector
       'raccoon_flashcard_data.txt'
     end
   end
-
-  # def self.done?(user_choice)
-  #   if user_choice == "exit"
-
-  # end
 
 end

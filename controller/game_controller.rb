@@ -1,4 +1,3 @@
-require_relative '../model/parser'
 require_relative '../view/display'
 require_relative 'deck_creator'
 require_relative '../view/clear_screen'
@@ -27,10 +26,17 @@ class GameController
           break
         elsif card.answered_correctly?(user_response)
           Display::right_answer
-          deck.move_correct_card(card)
+          deck.remove_card_from_rotation(card)
         else
           Display::wrong_answer
-          deck.move_incorrect_card
+          card.increase_incorrect_answer_count
+          if card.incorrect_answer_limit_reached?
+            Display::incorrect_answer_limit_reached(card)
+            sleep(2.5)
+            deck.remove_card_from_rotation(card)
+          else
+            deck.move_incorrect_card
+          end
         end
         sleep(1.5)
         ClearScreen::reset_screen
