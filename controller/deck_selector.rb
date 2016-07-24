@@ -1,14 +1,15 @@
 module DeckSelector
 
-  def self.display_choices
-  puts <<-GAME_LIST
-    Please choose a deck by number:
+   def self.display_choices
+    Display::game_selector_screen
+  # puts <<-GAME_LIST
+  #   Please choose a deck by number:
 
-    1. Nighthawks
-    2. Otters
-    3. Raccoons
+  #   1. Nighthawks
+  #   2. Otters
+  #   3. Raccoons
 
-  GAME_LIST
+  # GAME_LIST
   end
 
   def self.evaluate_user_choice
